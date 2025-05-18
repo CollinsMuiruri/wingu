@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">    <link rel="stylesheet" href="index.css">
+    <title>Wingu Weather</title>
+</head>
+
+<body>
+    <video autoplay muted loop id="bg-video">
+        <source src="/images/rain-vid-2.mp4" type="video/mp4">
+    </video>
+    <div class="container">
+        <div class="left-container">
+            <p class="logo">wingu.weather</p>
+            <div class="bottom-area">
+                <div class="degree-text">
+                    <p id="degrees">08
+                    <div id="degree-symbol">°</div>
+                    </p>
+                </div>
+                <div class="meta-details">
+                    <div class="city">London</div>
+                    <div class="date">06:09 - Sunday, 6 Oct ‘19</div>
+                </div>
+                <div class="icon-area">
+                    <img src="./images/rainy-icon.png" alt="">
+                </div>
+            </div>
+
+        </div>
+        <div class="right-container">
+            <div class="overlay">
+                <div class="top">
+                    <input type="text" placeholder="Another location" class="search-bar">
+                    <a href="#" id="search-button">
+                        <img src="images/Search icon.svg" alt="">
+                    </a>
+                </div>
+                <div class="results-area">
+                    <li>Birmingham</li>
+                    <li>Manchester</li>
+                    <li>New York</li>
+                    <li>California</li>
+                </div>
+                <hr>
+                <div class="bottom">
+                    <p id="bottom-title">Weather Details</p>
+
+                    <div class="weather-details">
+                        <div class="single-detail">
+                            <li class="left-text">Cloudy</li>
+                            <li class="right-text">86%</li>
+                        </div>
+                        <div class="single-detail">
+                            <li class="left-text">Humidity</li>
+                            <li class="right-text">62%</li>
+                        </div>
+                        <div class="single-detail">
+                            <li class="left-text">Wind</li>
+                            <li class="right-text">8km/h</li>
+                        </div>
+                        <div class="single-detail">
+                            <li class="left-text">Rain</li>
+                            <li class="right-text">8mm</li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

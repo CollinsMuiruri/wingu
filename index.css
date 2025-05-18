@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+body{
+    /* background: url('/images/rain-back.png');
+    background-repeat: no-repeat;
+    background-size: cover; */
+    width: 100%;
+    font-family: "Barlow", sans-serif;
+    color: #FFFFFF;
+}
+
+#bg-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.container{
+    display: flex;
+}
+
+.left-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 55%;
+    /* border: 2px solid yellow; */
+}
+
+.left-container .logo{
+    margin: 50px 20px 50px 50px;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.left-container .bottom-area{
+    display: flex;
+    align-items: last baseline;
+    gap: 50px;
+    margin: 20px 20px 100px 50px;
+}
+
+.left-container .bottom-area .degree-text{
+    display: flex;
+    align-items: center ;
+    align-self: baseline;
+    margin-bottom: -30px;
+}
+
+.left-container .bottom-area .degree-text #degrees{
+    font-size: 10rem;
+    font-weight: 500;
+    
+}
+
+.left-container .bottom-area .degree-text #degree-symbol{
+    font-size: 7rem;
+    font-weight: 600;
+    /* margin-left: -20px; */
+    /* margin-top: -20px; */
+}
+
+.left-container .bottom-area .meta-details .city{
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+.left-container .bottom-area .meta-details .date{
+    font-size: 1.5rem;
+    font-weight: 400;
+
+}
+
+.left-container .bottom-area .icon-area img{
+    width: 60px;
+}
+
+.right-container{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    height: 99.9vh;
+    /* background: #223434; */
+    background: linear-gradient(90deg, rgba(34, 52, 52, .5) 0%, rgba(34, 52, 52, .4) 99%);
+    backdrop-filter: blur(8px);
+    /* border: 2px solid red; */
+}
+
+.overlay{
+    height: 100%;
+    width: 100%;
+}
+
+.right-container .top{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 50px;
+}
+
+.right-container .top .search-bar{
+    height: 40px;
+    margin-left: 50px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 3px solid #999999;
+    width: 50%;
+    color:#FFFFFF;
+    font-size: 20px;
+
+}
+
+.right-container .top .search-bar:hover{
+    width: 110%;
+    border: none;
+    border-bottom: 3px solid #FFFFFF;
+    transition: .5s;
+
+}
+
+.right-container .top .search-bar::placeholder{
+    font-size: 20px;
+    font-weight: 100;
+    color: #999999;
+    letter-spacing: 1px;    
+}
+
+
+.right-container .top #search-button{
+    background-color: #789F9B;
+    padding: 30px;
+}
+
+.right-container .top #search-button img{
+    width: 30px;
+}
+
+.right-container .results-area{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.right-container .results-area li{
+    list-style: none;
+    padding-left: 50px;
+    font-size: 30px;
+    font-weight: 300;
+    color: #999999;
+}
+
+.right-container .results-area li:hover{
+    cursor: pointer;
+    color: #FFFFFF;
+    font-weight: 300;
+    transition: .3s;
+}
+
+.right-container hr{
+    border: 1px solid #999999;
+    /* margin-top: 50px;
+    margin-bottom: 50px;    */
+    margin: 50px;
+}
+
+.right-container .bottom{
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+}
+
+.right-container .bottom #bottom-title{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+.right-container .bottom li{
+    list-style: none;
+}
+
+.right-container .bottom .weather-details{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.right-container .bottom .weather-details .single-detail{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    font-size: 25px;
+}
+
+.right-container .bottom .weather-details .single-detail .left-text{
+    color: #999999;
+    font-weight: 400;
+}
+
+.right-container .bottom .weather-details .single-detail .right-text{
+    font-weight: 500;
+}
+
+
+/* Add this at the bottom of your CSS */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-container,
+    .right-container {
+        width: 100%;
+        height: auto;
+    }
+
+    .left-container .logo {
+        margin: 30px 20px;
+        font-size: 20px;
+    }
+
+    .left-container .bottom-area {
+        flex-direction: row;
+        margin: 20px;
+        gap: 20px;
+    }
+
+    .left-container .bottom-area .degree-text {
+        margin-bottom: 0;
+        font-size: 10px;
+    }
+
+    .left-container .bottom-area .degree-text #degrees {
+        font-size: 6rem;
+    }
+
+    .left-container .bottom-area .degree-text #degree-symbol {
+        font-size: 4rem;
+    }
+
+    .left-container .bottom-area .meta-details .city {
+        font-size: 2.5rem;
+    }
+
+    .left-container .bottom-area .meta-details .date {
+        font-size: 1.2rem;
+    }
+
+    .right-container .top {
+        margin-bottom: 30px;
+        padding: 0 20px;
+    }
+
+    .right-container .top .search-bar {
+        margin-left: 0;
+        width: 70%;
+        font-size: 16px;
+    }
+
+    .right-container .top .search-bar::placeholder {
+        font-size: 16px;
+    }
+
+    .right-container .top #search-button {
+        padding: 20px;
+    }
+
+    .right-container .results-area li {
+        padding-left: 20px;
+        font-size: 20px;
+    }
+
+    .right-container hr {
+        margin: 30px 20px;
+    }
+
+    .right-container .bottom {
+        padding-left: 20px;
+    }
+
+    .right-container .bottom #bottom-title {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    .right-container .bottom .weather-details .single-detail {
+        width: 90%;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .left-container .bottom-area {
+        align-items: center;
+        text-align: center;
+    }
+
+    .left-container .bottom-area .icon-area {
+        order: -1;
+    }
+
+    .right-container .top {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+
+    .right-container .top .search-bar {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .right-container .top .search-bar:hover {
+        width: 100%;
+    }
+
+    .right-container .top #search-button {
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .right-container .results-area li {
+        font-size: 18px;
+    }
+
+    .right-container .bottom .weather-details .single-detail {
+        width: 100%;
+        font-size: 16px;
+    }
+}
